@@ -36,6 +36,5 @@ Once the configuration is finished, access the insipid.cgi through your
 web browser at the URL you've configured and the database should be 
 automatically configured.
 
-If you ever upgrade Insipid, the database and what not will be 
-automatically updated upon access.
-
+If you ever upgrade Insipid, the database schema will be automatically 
+updated upon access.

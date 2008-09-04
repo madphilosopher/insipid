@@ -57,7 +57,8 @@ if($@) {
 
 		if($@) {
 			show_error("Database error", "There was a problem " . 
-			"creating the database tables required by Insipid.");
+			"creating the database tables required by Insipid:",
+			$errstr);
 		}
 	} else {
 		print "Content-Type: text/plain\r\n\r\nError: $@\r\n";
@@ -65,13 +66,19 @@ if($@) {
 }
 
 sub show_error {
-	my ($subject, $body) = (@_);
+	my ($subject, $body, $error) = (@_);
 	print "Content-Type: text/html\r\n\r\n";
 	print "<html><head><title>Insipid Error</title></head>";
 	print "<body>";
 	print "<h2>$subject</h2>";
 	print "<p><font size=\"+1\"></font></p>";
 	print "<p><font size=\"+1\">$body";
-	print "</font></p></body></html>";
+	print "</font></p>";
+
+	if(defined($error)) {
+		print '<pre>' . $error . '</pre>';
+	}
+
+	print '</body></html>';
 	exit;
 }
