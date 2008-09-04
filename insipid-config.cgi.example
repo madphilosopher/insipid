@@ -1,0 +1,22 @@
+# This is the database configuration for Insipid.  The "dbtype" parameter
+# can be either "mysql" for the MySQL database or "Pg" for PostgreSQL.
+dbname = insipid_luke
+dbuser = luke
+dbpass = dbpass
+dbtype = mysql
+
+# If you'd like the Insipid database tables to use a prefix, uncomment
+# this line.
+#dbprefix = insipid_
+
+# The base URI to your installation.
+pagepath = /Luke
+
+# If your webserver is not running on port 80 and it doesn't properly set
+# the SERVER_PORT variable, set it here.
+#server_port = 8080
+
+# The login name and password for using the Insipid interface.
+username = luke
+userpass = yourpassword
+

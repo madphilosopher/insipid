@@ -1,0 +1,25 @@
+For 1.0
+==========================================================================
+- Quote marks screw up adding a bookmark
+- Move htaccess management into the configuration page
+- Fix the text/html content type going that's snapshotted
+- Check for duplicate page cache objects before insert (due to all the
+  warnings that appear in the log)
+- Fix the missing tag rename and delete functionality
+
+
+Everything else
+==========================================================================
+- Optionally use LWP to automatically import Delicious marks
+- Link checker
+- Pageable snapshot list
+- An inbox of links that people submit, either through a public interface 
+  or XML-RPC (Rest of course)
+- A way to publish links to friends via their exposed RPC interface
+- Add a new column to the bookmark table for a "Via" field (which can be 
+  filled in automatically when a mark is pushed and accepted)
+- Add - (subtractive) filtering
+- Share the iteration code between export and display
+- More configurable options (e.g., max RSS entries, max tags displayed, etc)
+- Order and categories of options
+

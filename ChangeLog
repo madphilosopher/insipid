@@ -1,0 +1,100 @@
+Mon Mar 27 18:59 EST 2006  Luke Reeves  <luke@neuro-tech.net>
+
+	* Added an option for disabling mod_rewrite support
+	* Added a prefix option for database tables
+
+Tue Mar 21 19:34 EST 2006  Luke Reeves	<luke@neuro-tech.net>
+
+	* Fix the export system
+
+Tue Feb 21 12:30 EST 2006  Luke Reeves  <luke@neuro-tech.net>
+
+	* Fix up database connectivity for newer PostgreSQL 
+	  libraries
+	* Incorporate patch from Paul Boin that allows importing
+	  of regular del.icio.us backups (as opposed to only
+	  supporting exports as before)
+
+Mon Nov 21 12:41 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Fixed some of the cleanup process for snapshot deletion
+	* Added a "Fetch Related" function, so that the snapshot
+	  tool can grab related objects
+	* Work on the tag tools - delete and rename tags	  
+
+Fri Nov 04 09:00 EST 2005  Luke Reeves	<luke@neuro-tech.net>
+
+	* Database fix (thanks to Jutta Horstmann)
+	* Remove export and import to server-side files, since the 
+	  standalone tools can easily accomplish that
+
+Fri Sep 23 07:35 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Enable taint mode for all the modules/scripts.
+
+Thu Sep 22 12:15 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Remove dependency on App::Config, since all it does is
+	  read a simple text file.
+	* Remove dependency on CGI::Session in lieu of a built-in
+	  session management system
+	* Fixed up database tables
+
+Mon Sep 19 20:37 EST 2005  Luke Reeves	<luke@neuro-tech.net>
+
+	* Add the ability to drill-down into more details on cached
+	  objects.
+	* Fix up the standalone import and export tools.
+	* Show the correct total size of snapshots in the snapshot
+	  view.
+
+Fri Sep 16 21:02 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Move tools to a separate directory
+	* Add a standalone export script.
+	* Fix bugs in the export concerning character encoding.
+
+Fri Sep 16 12:30 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Fix a couple possible installation issues on PostgreSQL
+	  systems.
+
+Mon Sep 05 22:28 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+	
+	* Major code cleanup (splitting the main CGI file into multiple,
+	  more maintainable ones inside of the lib/Insipid directory)
+	* Bugfix for adding duplicate items not being flagged as such
+
+Tue Aug 09 22:05 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Added proxy support for fetching pages
+	* Fix blob size for MySQL tables
+	* Added a toggle to not redirect when a mark is added
+	* Added a toggle to snapshot a page when bookmarked
+	* Support passing the Referer header when snapshotting a page.
+	* Added support for If-Modified-Since requests to cached objects.
+	* Added a Last-Modified header for cache objects.
+
+Thu Jul 21 21:35 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Fix a bunch of errors concerning PostgreSQL and the snapshots,
+	  as well as other bug fixes.
+
+Sun Jul 17 15:19 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+	
+	* Added the page cache feature, so a user can take snapshots of pages
+	  that have been bookmarked.
+
+Tue Jul 05 21:58 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Added addition of tags (like Documentation + Java) to get
+	  intersections of bookmarks.
+
+Fri May 27 11:05 JST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Added postgresql backend support (submitted by Stephen Patterson)
+
+Mon Apr 25 21:00 EST 2005  Luke Reeves  <luke@neuro-tech.net>
+
+	* Add a search box, with the option of showing it to non-logged in
+	  users.
