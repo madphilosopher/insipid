@@ -1,6 +1,6 @@
 #!/usr/bin/perl -T
 #
-# Copyright (C) 2006 Luke Reeves
+# Copyright (C) 2008 Luke Reeves
 #
 # Modified by: Manuel de la Torre <mdltorre(a)gmail(dot)com>
 #
