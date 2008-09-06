@@ -57,7 +57,7 @@ my %options;
 
 my $sql = "select name, value from $tbl_options";
 my $sth = $dbh->prepare($sql);
-$sth->execute() or die $DBI::errstr;
+$sth->execute() or return 1; #die $DBI::errstr;
 
 while(my $hr = $sth->fetchrow_hashref) {
 	$options{$hr->{'name'}} = $hr->{'value'};

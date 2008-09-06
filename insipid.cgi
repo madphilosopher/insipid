@@ -43,13 +43,16 @@ if($@) {
 			"<a href=\"http://search.cpan.org/\">search CPAN</a> " .
 			"for the module or check the " .
 			"<a href=\"http://www.neuro-tech.net/insipid/\">" .
-			"Insipid</a> homepage for more information.");
+			"Insipid</a> homepage for more information.",
+			$errstr);
 	} elsif (
 		($errstr =~ /Couldn\'t acquire lock on id/) ||
 		($errstr =~ /doesn\'t exist/) ||
 		($errstr =~ /relation \".*\" does not exist/) ) {
+
 		# This means that a database connection was established but the
 		# tables were not found.
+		undef($@);
 		eval {
 			require Insipid::Database;
 			Insipid::Database::install();
