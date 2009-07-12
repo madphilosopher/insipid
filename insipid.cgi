@@ -61,7 +61,7 @@ if($@) {
 		undef($@);
 		eval {
 			push(@INC, "lib");
-			require Insipid::DBCreate;
+			require Insipid::DBInstall;
 			Insipid::DBInstall::install();
 		};
 
