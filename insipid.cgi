@@ -18,6 +18,7 @@
 # USA
 #
 
+use Data::Dumper;
 use warnings;
 use strict;
 
@@ -42,13 +43,18 @@ if($@) {
 		show_error("Couldn't find the module \"$1\".", "You may want to " .
 			"<a href=\"http://search.cpan.org/\">search CPAN</a> " .
 			"for the module or check the " .
-			"<a href=\"http://www.neuro-tech.net/insipid/\">" .
+			"<a href=\"https://neuro-tech.net/insipid/\">" .
 			"Insipid</a> homepage for more information.",
 			$errstr);
 	} elsif (
 		($errstr =~ /Couldn\'t acquire lock on id/) ||
 		($errstr =~ /doesn\'t exist/) ||
 		($errstr =~ /relation \".*\" does not exist/) ) {
+
+		print STDERR "Creating database\n";
+
+		#print STDERR Dumper(\%INC);
+		#delete $INC{'Insipid/Database.pm'};
 
 		# This means that a database connection was established but the
 		# tables were not found.
@@ -59,6 +65,7 @@ if($@) {
 		};
 
 		if($@) {
+			$errstr = $@;
 			show_error("Database error", "There was a problem " . 
 			"creating the database tables required by Insipid:",
 			$errstr);

@@ -55,17 +55,9 @@ $dbh = DBI->connect($dsn, $dbuser, $dbpass, { 'RaiseError' => 0}) or die $DBI::e
 
 my %options;
 
-my $sql = "select name, value from $tbl_options";
-my $sth = $dbh->prepare($sql);
-$sth->execute() or return 1; #die $DBI::errstr;
-
-while(my $hr = $sth->fetchrow_hashref) {
-	$options{$hr->{'name'}} = $hr->{'value'};
-}
-
-if(need_upgrade() eq 1) {
-	dbupgrade();
-}
+#if(need_upgrade() eq 1) {
+#	dbupgrade();
+#}
 
 sub export_options {
 	my ($writer) = (@_);
@@ -131,12 +123,25 @@ sub need_upgrade {
 # Functions
 
 sub get_option {
+	if(keys (%options) == 0) {
+		my $sql = "select name, value from $tbl_options";
+		my $sth = $dbh->prepare($sql);
+		$sth->execute() or die $DBI::errstr;
+
+		while(my $hr = $sth->fetchrow_hashref) {
+			$options{$hr->{'name'}} = $hr->{'value'};
+		}
+		$sth->close();
+	}
+
 	my ($name) = (@_);
 	return $options{$name};
 }
 
 sub install {
 	my ($sth, @creates);
+
+	print STDERR "Performing database installation.\n";
 	
 	print "Content-Type: text/html\r\n\r\n";
 	print "<html><head><title>Insipid Installation</title></head><body>";

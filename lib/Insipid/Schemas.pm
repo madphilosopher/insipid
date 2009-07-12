@@ -44,7 +44,7 @@ $createPostgres
 # Insipid will check the database version number on each initialization of
 # the options table (every hit essentially) and upgrade the tables if there's
 # any mismatch.
-our $version = "0.9.19";
+our $version = "0.9.20";
 
 our $createPostgres = <<CPOSTGRES;
 CREATE TABLE $tbl_authentication (
