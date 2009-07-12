@@ -1,0 +1,7 @@
+=== Open Bugs ===
+
+* Updating options fails with no error message when Postgres is the backend
+
+=== Fixed in 0.9.21 ===
+
+
