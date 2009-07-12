@@ -57,9 +57,6 @@ parsepage
 fetch_url
 );
 
-use SelfLoader;
-__DATA__
-
 my $ua = LWP::UserAgent->new(timeout=>30);
 if(get_option('proxy_host') ne '') {
 	my $proxy_host = get_option('proxy_host');
@@ -120,7 +117,8 @@ sub fetch_url {
 	if(defined($roverride)) { $referer = $roverride; }
 	my $md5 = md5_hex($url);
 
-	my $req = HTTP::Request->new(GET => $url);
+	my $req = HTTP::Request->new(GET => $url) or die "Can't fetch page: $!\n";
+
 	if($referer ne '') { $req->header( referer => $referer ); }
 
 	my $res = $ua->request($req);
