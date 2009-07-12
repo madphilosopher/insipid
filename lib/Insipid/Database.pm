@@ -55,10 +55,6 @@ $dbh = DBI->connect($dsn, $dbuser, $dbpass, { 'RaiseError' => 0}) or die $DBI::e
 
 my %options;
 
-#if(need_upgrade() eq 1) {
-#	dbupgrade();
-#}
-
 sub export_options {
 	my ($writer) = (@_);
 	my ($sth);
@@ -107,32 +103,31 @@ sub dbupgrade {
 	return;
 }
 
-# Check if we need an upgrade
-sub need_upgrade {
-	if(!defined($options{version})) { return 1; }
+sub get_option {
+	my ($name) = (@_);
 
-	if($options{version} ne $version) {
-		return 1;
-	} else {
-		return 0;
+	if(keys (%options) == 0) {
+		reload_options();
 	}
+
+	# Determine if we need to upgrade the database
+	if($version ne $options{'version'}) {
+		print STDERR "Upgrading schema from $options{'version'} to $version.\n";
+		dbupgrade();
+		reload_options();
+	}
+
+	return $options{$name};
 }
 
-# Functions
+sub reload_options {
+	my $sql = "select name, value from $tbl_options";
+	my $sth = $dbh->prepare($sql);
+	$sth->execute() or die $DBI::errstr;
 
-sub get_option {
-	if(keys (%options) == 0) {
-		my $sql = "select name, value from $tbl_options";
-		my $sth = $dbh->prepare($sql);
-		$sth->execute() or die $DBI::errstr;
-
-		while(my $hr = $sth->fetchrow_hashref) {
-			$options{$hr->{'name'}} = $hr->{'value'};
-		}
+	while(my $hr = $sth->fetchrow_hashref) {
+		$options{$hr->{'name'}} = $hr->{'value'};
 	}
-
-	my ($name) = (@_);
-	return $options{$name};
 }
 
 # This configures the URLs in the application to support mod_rewrite or
