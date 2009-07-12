@@ -18,7 +18,7 @@ help.
 Rename the htaccess file to .htaccess and add a "RewriteBase" clause to the 
 top, such as:
 
-	RewriteBase /~luke/
+    RewriteBase /~luke/
 
 You can optionally add "insipid.cgi" to the list of files in the 
 DirectoryIndex line (for example, "DirectoryIndex index.cgi insipid.cgi").
@@ -26,11 +26,11 @@ DirectoryIndex line (for example, "DirectoryIndex index.cgi insipid.cgi").
 The non-standard Perl packages required for use (with their Debian package
 names) are:
 
-	Module		Debian Package
-	--------------	------------------------------------
-	Date::Format	libtimedate-perl
-	XML::Parser	libxml-parser-perl
-	XML::Writer	libxml-writer-perl
+    Module           Debian Package
+    --------------   ------------------------------------
+    Date::Format     libtimedate-perl
+    XML::Parser      libxml-parser-perl
+    XML::Writer      libxml-writer-perl
 
 Once the configuration is finished, access the insipid.cgi through your
 web browser at the URL you've configured and the database should be 
