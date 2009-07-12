@@ -1,6 +1,7 @@
 Sun Jul 12 11:00 EST 2009  Luke Reeves  <luke@neuro-tech.net>
 
 	* Fixed the Perl 5.10 module reloading bug.
+	* Fixed snapshotting functionality
 
 Sat Jul 11 23:30 EST 2009  Luke Reeves  <luke@neuro-tech.net>
 
