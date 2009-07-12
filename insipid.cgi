@@ -23,7 +23,6 @@ use warnings;
 use strict;
 
 # This stub checks for libraries and what not and then calls the main program.
-push(@INC, "lib");
 
 if(!-e "insipid-config.cgi") {
 	# TODO: Better error message here.
@@ -33,6 +32,7 @@ if(!-e "insipid-config.cgi") {
 
 
 eval {
+	push(@INC, "lib");
 	require Insipid::Main;
 	Insipid::Main::main();
 };
@@ -60,8 +60,9 @@ if($@) {
 		# tables were not found.
 		undef($@);
 		eval {
-			require Insipid::Database;
-			Insipid::Database::install();
+			push(@INC, "lib");
+			require Insipid::DBCreate;
+			Insipid::DBInstall::install();
 		};
 
 		if($@) {

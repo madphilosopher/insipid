@@ -78,8 +78,6 @@ sub export_options {
 }
 
 sub dbupgrade {
-	print STDERR "Upgrading Insipid database...\n";
-
 	my $sql = "update $tbl_options set value = ? where (name = ?)";
 	my $sth = $dbh->prepare($sql);
 	$sth->execute($version, 'version');
@@ -131,43 +129,10 @@ sub get_option {
 		while(my $hr = $sth->fetchrow_hashref) {
 			$options{$hr->{'name'}} = $hr->{'value'};
 		}
-		$sth->close();
 	}
 
 	my ($name) = (@_);
 	return $options{$name};
-}
-
-sub install {
-	my ($sth, @creates);
-
-	print STDERR "Performing database installation.\n";
-	
-	print "Content-Type: text/html\r\n\r\n";
-	print "<html><head><title>Insipid Installation</title></head><body>";
-
-	print "<p>Creating tables...";
-
-	if($dbtype eq 'mysql') {
-		@creates = split(/\;/, $createMySQL);
-	} else {
-		@creates = split(/\;/, $createPostgres);
-	}
-
-	foreach(@creates) {
-		my $sql = $_;
-		if(length($sql) > 2) {
-			$sth = $dbh->prepare($sql);
-			$sth->execute() or print "<br />Error executing \"$sql\" - $DBI::errstr<br />";
-		}
-	}
-	print " done!</p>";
-
-	print "<p>Insipid's database has been installed.  You can reload this " .
-		"page to start using Insipid.</p>";
-	
-	print "</body></html>";
-
 }
 
 # This configures the URLs in the application to support mod_rewrite or
