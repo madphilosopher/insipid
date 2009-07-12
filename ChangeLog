@@ -1,3 +1,8 @@
+Sat Jul 11 23:30 EST 2009  Luke Reeves  <luke@neuro-tech.net>
+
+	* Dusted off the codebase, kicked the tires and finally
+	  finished off the git migration.
+
 Mon Mar 27 18:59 EST 2006  Luke Reeves  <luke@neuro-tech.net>
 
 	* Added an option for disabling mod_rewrite support
