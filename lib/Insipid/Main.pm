@@ -460,7 +460,9 @@ sub show_options {
 	# Save options if they were posted.
 	print "<br /><br />";
 	if(param('save')) {
-		print "<div class=\"error\">Your options have been saved.</div>";
+		my $sql = "update $tbl_options set value=? 
+			where (name = ?)";
+		my $sth = $dbh->prepare($sql);
 
 		my %save;
 		foreach my $p (@valid) {
@@ -470,11 +472,15 @@ sub show_options {
 		}
 
 		foreach my $k (keys %save) {
-			my $sql = "update $tbl_options set value=? 
-				where (name = ?)";
-			my $sth = $dbh->prepare($sql);
 			$sth->execute($save{$k}, $k);
 		}
+
+		# The proxy_host can be empty, so check for that.
+		if(!defined($save{'proxy_host'})) {
+			$sth->execute('', 'proxy_host');
+		}
+
+		print "<div class=\"error\">Your options have been saved.</div>";
 	}
 
 	# Now show em
