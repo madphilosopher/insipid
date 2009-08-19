@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>My tags</title>
+<script type="text/javascript" src="chrome://inspd/content/inc/vars.js"></script>
+<script type="text/javascript" src="chrome://inspd/content/inc/md5.js"></script>
+<script type="text/javascript" src="chrome://inspd/content/inc/globals.js"></script>
+<script type="text/javascript" src="chrome://inspd/content/v2/json/inspd_json_lib.js"></script>
+<script type="text/javascript" src="chrome://inspd/content/v2/json/mytags.js"></script>
+<link rel="stylesheet" type="text/css" href="chrome://inspd/content/v2/json/style.css">
+<link rel="shortcut icon" href="chrome://inspd/content/v2/json/images/inspd_icon3_mytagcloud_1616.png" />
+</head>
+
+<body>
+			<h1 id="header"><img src="images/inspd_icon3_mytagcloud_html_icon_1616.png" align="absmiddle" style="margin-right:5px;"/> My tags</h1>
+			<div id="cont">
+				<div id="nav" style="display:none;">
+					<div id ="cloud_header_div_searchbar" class="cloud_header_div_searchbar"></div>
+		<span id="navtags"></span>
+				</div>
+			
+				<div class="inspd_tags">
+				
+				<span class="tags_search" id="tags_search" style="display:block;visibility:hidden;">
+				&raquo; Search tags inline: <input size="11" name="qq" id="qq" type="text" onkeyup="$id('inspd_cloud').innerHTML = $cloud.g_draw(Insipid.tags,this.value)" />
+				&nbsp; &nbsp; <a onfocus="this.blur();" href="#" id="anchor_show_options" onclick="$mytags.showOptionsDiv('nav',this.id);return false;">&raquo; Show options</a>
+				</span>
+				
+				<ul id="inspd_cloud" class="inspd_cloud">
+				<li style="font-size: 20px;">Loading your tags...</li>
+				</ul>
+				
+				</div>
+			
+			</div>
+			
+
+
+			
+</body>
+</html>

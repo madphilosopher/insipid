@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html id="inspd">
+<head>
+	<title>Quick post to Insipid</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<script type="text/javascript" src="chrome://inspd/content/inc/vars.js"></script>
+	<script type="text/javascript" src="chrome://inspd/content/inc/globals.js"></script>
+	<script type="text/javascript" src="chrome://inspd/content/v2/altpost/qpost.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="chrome://inspd/content/v2/json/images/inspd_icon7_posttoinsipid_icon_1616.png" />
+
+<style>
+
+html, body, form { margin: 0; padding: 0; }
+body { font-family: arial, sans-serif; background-color: #fff; }
+h1, p { margin: 0 0 0.5em 0; padding: 0; }
+input { text-indent: 2px; _text-indent: 0; }
+input[type="submit"] { text-indent: 0; }
+h1 { font-size: 130%; }
+#header-mini { background-color: #ddd; padding: 0.3em 0.5em; margin: 0; }
+#header-mini h1 { font-size: 130%; margin: 0; padding: 0 0 0 26px; }
+#main { margin: 0px 1em 0 1em; }
+.postui { font-size: 14px }
+.postui .tag { padding: 2px; text-decoration: none; }
+.postui input { margin-left: 0; padding-left: 0; text-indent: 0; }
+td.rs { text-align: right; }
+
+</style>
+</head>
+
+<body>
+
+
+<div id="header-mini">
+<h1 style="display:inline">Quick post to Insipid</h1>
+</div>
+
+ 
+<div class="postui" id="main">
+<form id="InspdForm" name="InspdForm" method="post" action="">
+<table>
+	<tbody>
+	
+	<tr id="msgurltr">
+		<td>&nbsp;</td>
+		<td align="left" id="msgurl" class="smaller"></td>
+	</tr>
+	
+	<tr>
+		<td class="rs">url</td>
+		<td><input name="url" autocomplete="off" id="url" value="" size="80" type="text" /></td>
+	</tr>
+	<tr>
+		<td class="rs">Title</td>
+		<td><input name="title" autocomplete="off" id="title" value="" size="80" type="text" /></td><td>
+		</td>
+	</tr>
+	<tr>
+		<td class="rs">Description</td>
+		<td>
+			<textarea name="description" id="description" rows="2" cols="40"></textarea>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td class="rs">tags</td>
+		<td><input id="tags" name="tags" value="" size="80" type="text" autocomplete="off" /></td><td align="left" class="smaller"><!--space separated--></td>
+	</tr>
+	
+
+	<tr>
+	
+	<td></td>
+	
+	<td><span id="snapshotspan">
+	<label class="smaller" for="snapshot">Snapshot:</label>
+	<input type="checkbox" name="snapshot" id="snapshot"/>
+	&nbsp;&nbsp;&nbsp;
+	</span>
+	
+	<label class="smaller" for="access_level">Public:</label>
+	<input type="checkbox" id="access_level" name="access_level" checked="true"/>
+	&nbsp;&nbsp;&nbsp;
+	<label class="smaller" for="redirect">Return:</label>
+	<input type="checkbox" id="redirect" name="redirect"/>
+	
+
+	</td>
+	
+	
+	
+	
+	</tr>
+	
+	
+	
+	<tr>
+		<td class="rs"><input id="submitbtn" name="submitbtn" value="Save" type="submit" /></td>
+		<td align="right">
+
+		</td>
+		<td></td>
+	</tr>
+
+		
+	</tbody></table>
+        <input type="hidden" id="save" name="save" value="true" />
+	    <input type="hidden" id="op" name="op" value="add_bookmark" />
+</form>
+
+</div>
+<script type="text/javascript">
+$id('url').style.width = $id('title').style.width = $id('tags').style.width = '500px'
+$id('description').style.width = $id('tags').offsetWidth - 4 + 'px'
+</script>
+</body>
+</html>

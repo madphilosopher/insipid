@@ -1,0 +1,41 @@
+form { margin: 0; padding: 0; }
+ul, ol, li { margin: 0 0 0.5em 0; padding: 0; }
+li { margin-left: 2em; }
+
+
+#inline-suggestions { border: 2px solid #eee; border-top: none; position: absolute; background-color: #fff; padding: 2px; }
+#inline-suggestions .tag { font-size: 80%; display: block; color: #000; cursor: default;  }
+
+
+/* ========================================== */
+/*popup suggestions hover with hand color*/
+#inline-suggestions .selected, #suggestions .tag:hover  { background-color: #377700 !important; color: #fff !important; text-decoration: none; cursor: pointer; }
+/*============================================*/
+
+.postui { font-size: 14px }
+.postui .tag { padding: 2px; text-decoration: none; }
+.postui ul { list-style-type: none; }
+/* =================================================== */
+/*suggestion popup select*/
+.postui .selected, .postui .tag:hover  { background-color: #800000  !important; color: #fff !important; text-decoration: none; }
+/*==================================================*/
+.postui .recommended { color: #080;  }
+.postui input { margin-left: 0; padding-left: 0; text-indent: 0; }
+.postui .bundle .tag, #suggest .tag { font-size: 90%; }
+a.noclicky, a.noclicky:hover { cursor: default; color: #000; text-decoration: none; }
+a.clicky { color: blue; cursor: pointer; }
+.postui ul li.bundle { padding: 0.25em 0.6em; text-align: justify; display: none; }
+.postui ul li.bundle {padding:0;margin:0 0 0.3em}
+.postui .bundle .label { display: inline; }
+.postui .fold { display: block; }
+.postui #notes { font-family: arial, sans-serif; font-size: 80%; }
+.postui .label span { text-align: left; font-weight: bolder; font-size: 100%; }
+.postui #sort { font-size: 85%; float: right; _margin-top: -25px; margin-top: 0.2em; white-space: nowrap; }
+.postui .bundles .label { color: #000; }
+.postui .bundles { margin-top: 0.5em; }
+.postui .bundle { margin: 0 0 0 1em; }
+/*======================================================= popupbg:*/
+.postui .popup { position: absolute; background-color: #FFFFCC; border-top: 2px solid #ccc; padding:2px 5px 5px 5px; }
+/*=================================================================*/
+
+

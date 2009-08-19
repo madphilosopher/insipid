@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r:RDF xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns="http://www.mozilla.org/2004/em-rdf#">
+    <!-- Insipid Firefox/Flock  Extension -->
+    <r:Description about="urn:mozilla:extension:inspd@danny">
+        <updates>
+            <r:Seq>
+                <r:li>
+                    <r:Description>
+                        <version>0.0.2.8</version>
+
+                        <!-- Firefox -->
+                        <targetApplication>
+                            <r:Description>
+                                <id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</id>
+                                <minVersion>1.5</minVersion>
+                                <maxVersion>6.0</maxVersion>
+                                <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.8.xpi</updateLink>
+
+                            </r:Description>
+                        </targetApplication>
+                        <!-- Flock -->
+                        <targetApplication>
+                            <r:Description>
+                                <id>{a463f10c-3994-11da-9945-000d60ca027b}</id>
+                                <minVersion>0.5</minVersion>
+                                <maxVersion>6.0</maxVersion>
+
+                                <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.8.xpi</updateLink>
+                            </r:Description>
+                        </targetApplication>
+                    </r:Description>
+                </r:li>
+            </r:Seq>
+        </updates>
+        <version>0.0.2.8</version>
+
+        <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.8.xpi</updateLink>
+    </r:Description>
+</r:RDF>

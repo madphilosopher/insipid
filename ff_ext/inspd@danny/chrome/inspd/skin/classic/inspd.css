@@ -1,0 +1,59 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+#inspd-searchbar-container{
+/* */
+}
+
+#inspd-searchbar-textbox {
+	min-width: 40px;
+	width: 80px;
+	min-height: 24px;
+	margin-right: 0px;
+	margin-left: 1px;
+}
+
+
+#inspd-searchbar-dropdown {
+	list-style-image: url("chrome://inspd/skin/searchtb/inspd-searchbar-dropdown-default-icon.png");
+	margin: 0px;
+	min-width: 40px;
+	width: 40px;
+}
+
+#inspd-searchbar-resizer {
+	min-height: 24px; 
+	min-width: 11px;
+	margin-left: 2px;
+	margin-right: 0px;
+	border: none;
+	background-image: url("chrome://inspd/skin/searchtb/inspd-searchbar-splitter.png");
+	background-color: transparent;
+}
+
+#inspd-searchbar-go {
+	list-style-image: url('chrome://inspd/skin/searchtb/inspd-searchbar-go-1413.png'); 
+	cursor: pointer;
+	margin: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+#inspd-button1-home{
+	list-style-image: url('chrome://inspd/skin/searchtb/inspd-button1-home.png');
+}
+
+#inspd-button2-posttoinsipid{
+	list-style-image: url('chrome://inspd/skin/searchtb/inspd-button2-posttoinsipid.png');
+}
+
+#inspd-button3-mytagcloud{
+	list-style-image: url('chrome://inspd/skin/searchtb/inspd-button3-mytagcloud.png');
+}
+
+#inspd-button4-mystars{
+	list-style-image: url('chrome://inspd/skin/searchtb/inspd-button4-mystars.png');
+}
+
+
+

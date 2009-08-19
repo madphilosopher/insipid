@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>inspd@danny</em:id>
+    <em:version>0.0.2.8</em:version>
+		<!-- Firefox -->	
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>1.5</em:minVersion>
+				<em:maxVersion>6.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+		
+		<!-- Flock -->
+	<em:targetApplication>
+		<Description>
+			<em:id>{a463f10c-3994-11da-9945-000d60ca027b}</em:id>
+			<em:minVersion>0.5</em:minVersion>
+			<em:maxVersion>6.0</em:maxVersion>
+		</Description>
+	</em:targetApplication>
+	
+	
+	
+    <em:name>Insipid Firefox/Flock Extension</em:name>
+    <em:description>Access your Insipid bookmark manager.</em:description>
+    <em:creator>Danny Miles</em:creator>
+	<em:contributor>Luke Reeves</em:contributor>
+	<em:iconURL>chrome://inspd/skin/icon1-3232.png</em:iconURL>
+    <em:homepageURL>https://neuro-tech.net/insipid/</em:homepageURL>
+	<em:updateURL>https://neuro-tech.net/insipid/inspd_update.xml</em:updateURL>
+		
+	</Description>      
+</RDF>

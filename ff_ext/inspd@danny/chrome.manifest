@@ -1,0 +1,8 @@
+content inspd  chrome/inspd/content/ 
+content inspd  chrome/inspd/content/ contentaccessible=yes 
+
+overlay chrome://browser/content/browser.xul chrome://inspd/content/inspdoverlay.xul
+
+skin	inspd	classic/1.0	chrome/inspd/skin/classic/
+style	chrome://browser/content/browser.xul	chrome://inspd/skin/inspd.css
+style	chrome://global/content/customizeToolbar.xul chrome://inspd/skin/inspd.css

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css"?>
+<?xml-stylesheet href="chrome://inspd/skin/inspd.css" type="text/css"?>
+
+<overlay id="InspdOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+
+<script type="application/x-javascript" src="chrome://inspd/content/inspdoverlay.js" charset="utf8"></script>
+
+	
+<toolbarpalette id="BrowserToolbarPalette">
+	
+
+<toolbaritem context="" id="inspd-searchbar-container" align="center" class="chromeclass-toolbar-additional" 
+	title="Insipid Searchbar">
+	
+
+	<toolbarbutton  onpopupshowing="$Chrome.set_options_ui_all();" id="inspd-searchbar-dropdown" type="menu" tooltiptext="Insipid search options" >
+	<menupopup>
+    
+        <menuitem id="inspd-searchbar-dropdown-allitems" oncommand="$Chrome.set_defsearchselection('allitems');" label="All items" type="radio" name="inspd-searchmarker" tooltiptext="Search all my items"/>
+        <menuitem id="inspd-searchbar-dropdown-mybookmarks" oncommand="$Chrome.set_defsearchselection('mybookmarks');" label="My bookmarks" type="radio" name="inspd-searchmarker" tooltiptext="Search my bookmarks"/>
+        <menuitem id="inspd-searchbar-dropdown-mytags" oncommand="$Chrome.set_defsearchselection('mytags');" label="My tags" type="radio" name="inspd-searchmarker" tooltiptext="Search my tags"/>
+			
+		
+		<menuseparator style="margin-bottom:2px;margin-top:1px;"/>
+		<menu id="inspd-searchbar-dropdown-options" label="Options" tooltiptext="">
+			<menupopup>
+				<menuitem id="inspd-searchbar-dropdown-options-defurl" oncommand="$Chrome.set_options_action('defurl');"    label="Default insipid.cgi URL..." tooltiptext="enter the URL of your insipid.cgi"/>
+				<menuitem id="inspd-searchbar-dropdown-options-json" oncommand="$Chrome.set_options_action('json');" label="Use JSON" type="checkbox" tooltiptext="Use Javascript and render the results locally."/>
+				<menuitem id="inspd-searchbar-dropdown-options-delintegrate" oncommand="$Chrome.set_options_action('delintegrate');" label="del.icio.us integration" type="checkbox" tooltiptext="Add a 'post to Insipid' link in del.icio.us pages" />
+				<menuitem id="inspd-searchbar-dropdown-options-searchbarautocomp" oncommand="$Chrome.set_options_action('searchbarautocomp');" label="Searchbar autocomplete" type="checkbox" tooltiptext="Enable/disable autocomplete in searchbar" />
+				<menuitem id="inspd-searchbar-dropdown-options-showgo" oncommand="$Chrome.set_options_action('showgo');" label="Show 'Go' button" type="checkbox" tooltiptext="Show 'Go' button beside searchbar" />
+				<menuitem id="inspd-searchbar-dropdown-options-showfavicon" oncommand="$Chrome.set_options_action('showfavicon');" label="Show bookmarks' favicon" type="checkbox" tooltiptext="Show favicons of websites" />
+				
+				<menu tooltiptext="Integrate some tweaks on your Insipid post page" label="'Alternative' post page">
+				<menupopup>
+				<menuitem name="inspd-searchbar-dropdown-options-altpost" id="inspd-searchbar-dropdown-options-altpost_0" oncommand="$Chrome.set_options_action('altpost',0);" label="Disabled" type="radio" tooltiptext="Disable all tweaks on Insipid post page and load it normally" />
+				<menuitem name="inspd-searchbar-dropdown-options-altpost" id="inspd-searchbar-dropdown-options-altpost_1" oncommand="$Chrome.set_options_action('altpost',1);" label="Tag autocompletion" type="radio" tooltiptext="Enable tag autocompletion on Insipid post page" />
+				<menuitem name="inspd-searchbar-dropdown-options-altpost" id="inspd-searchbar-dropdown-options-altpost_2" oncommand="$Chrome.set_options_action('altpost',2);" label="Quick post" type="radio" tooltiptext="Post from a very simple html page without waiting" />
+				<menuseparator style="margin-bottom:2px;margin-top:1px;"/>
+						<menu tooltiptext="Get popular tags from del.icio.us for links you post to your Insipid" label="Get Popular tags">
+							<menupopup>
+								<menuitem name="inspd-searchbar-dropdown-options-delintegratecommontags" id="inspd-searchbar-dropdown-options-delintegratecommontags_0" oncommand="$Chrome.set_options_action('delintegratecommontags',0);" label="Disabled" type="radio" tooltiptext="Don't get popular tags from del.icio.us" />
+								<menuitem name="inspd-searchbar-dropdown-options-delintegratecommontags" id="inspd-searchbar-dropdown-options-delintegratecommontags_url" oncommand="$Chrome.set_options_action('delintegratecommontags','url');" label="from url's history page" type="radio" tooltiptext="Get popular tags from del.icio.us md5(url) page" />
+								<menuitem name="inspd-searchbar-dropdown-options-delintegratecommontags" id="inspd-searchbar-dropdown-options-delintegratecommontags_personal" oncommand="$Chrome.set_options_action('delintegratecommontags','personal');" label="from personal post page" type="radio" tooltiptext="Get popular tags from your del.icio.us post page" />
+							</menupopup>
+						</menu>
+				
+				
+				</menupopup>
+				</menu>
+				
+				
+			
+			</menupopup>
+		</menu>
+        
+	</menupopup>
+     
+	</toolbarbutton>
+	
+  <textbox onfocus="$Chrome.set_options_ui_all();" type="autocomplete" id="inspd-searchbar-textbox" value="" oninput="" 
+  onkeypress="" onblur="" tabscrolling="true" persist="width" autocompletesearch="form-history" 
+  completeselectedindex="true" autocompletesearchparam="inspdsearchbarq" onkeyup="$buttons.click(event,'searchgotextbox');"/>
+	
+	<splitter context="" id="inspd-searchbar-resizer" state="open" collapse="none" resizebefore="closest" resizeafter="grow" />
+	<toolbaritem context="" id="inspd-searchbar-dummyforresize"/>
+	<toolbarbutton context="" id="inspd-searchbar-go" onclick="$buttons.click(event,'searchgo');" class="toolbarbutton-1" tooltiptext="Go" flex="0"/>
+		
+</toolbaritem>
+	
+	
+	
+	
+<toolbaritem context="" id="inspd-allin1button-container" style="list-style-image: url('chrome://inspd/content/v2/json/images/inspd_icon1_1616.png');" align="center" class="chromeclass-toolbar-additional" 
+	title="Insipid all-in-1 button">
+	
+
+	<toolbarbutton  id="inspd-allin1button-dropdown" type="menu" tooltiptext="Insipid all-in-1" >
+		<menupopup>
+			<menuitem label=" My Home" 
+				style="list-style-image: url('chrome://inspd/content/v2/json/images/inspd_icon2_home.png');"
+				class="menuitem-iconic"
+				tooltiptext="Open my Insipid front page"
+				onclick="$buttons.click(event,'home');" />
+	
+			<menuitem label=" Post" 
+				style="list-style-image: url('chrome://inspd/skin/searchtb/inspd_icon_post1.png');"
+				class="menuitem-iconic"
+				tooltiptext="Post this page to Insipid"
+				onclick="$buttons.click(event,'posttoinsipid');" />
+  
+			<menuitem label=" My Cloud" 
+				style="list-style-image: url('chrome://inspd/content/v2/json/images/inspd_icon3_mytagcloud_html_icon_1616.png');"
+				class="menuitem-iconic"
+				tooltiptext="Open my Insipid tag cloud"
+				onclick="$buttons.click(event,'mytagcloud');" />
+			
+			
+			
+			<menuitem label=" My Stars" 
+				style="list-style-image: url('chrome://inspd/content/v2/json/images/inspd_star_gold.png');"
+				class="menuitem-iconic"
+				tooltiptext="Open my stars page"
+				onclick="$buttons.click(event,'mystars');" />
+			
+		
+		
+		</menupopup>
+	</toolbarbutton>
+</toolbaritem>		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+<toolbarbutton id="inspd-button1-home"
+	context=""
+	label="Insipid Home"
+	tooltiptext="Open my Insipid front page"
+	class="toolbarbutton-1"
+	onclick="$buttons.click(event,'home');" >
+	</toolbarbutton>
+
+
+					
+<toolbarbutton id="inspd-button2-posttoinsipid"
+	context=""
+	label="Post to Insipid"
+	tooltiptext="Post this page to Insipid"
+	class="toolbarbutton-1"
+	onclick="$buttons.click(event,'posttoinsipid');" />
+	
+<toolbarbutton id="inspd-button3-mytagcloud"
+	context=""
+	label="Insipid tag cloud"
+	tooltiptext="Open my Insipid tag cloud"
+	class="toolbarbutton-1"
+	onclick="$buttons.click(event,'mytagcloud');" />
+	
+
+<toolbarbutton id="inspd-button4-mystars"
+	context=""
+	label="My Stars"
+	tooltiptext="Open my stars page"
+	class="toolbarbutton-1"
+	onclick="$buttons.click(event,'mystars');" />
+
+	
+						
+</toolbarpalette>
+					
+	
+	
+<toolbox id="navigator-toolbox" iconsize="small" mode="icons">
+
+    <toolbar id="inspd-Toolbar1" accesskey="" class="chromeclass-toolbar" 
+			context="toolbar-context-menu"
+			toolbarname="Insipid Toolbar" 
+			hidden="false" persist="hidden" customizable="true"
+			defaultset="inspd-button1-home,inspd-button2-posttoinsipid,inspd-button3-mytagcloud,inspd-button4-mystars,inspd-searchbar-container"
+			iconsize="small" mode="icons" />
+
+</toolbox>
+
+	
+</overlay>

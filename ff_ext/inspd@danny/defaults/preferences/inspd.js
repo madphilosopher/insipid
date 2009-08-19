@@ -1,0 +1,22 @@
+pref("extensions.inspd.defurl", "");
+pref("extensions.inspd.showgo", "1");
+pref("extensions.inspd.delintegrate", "0");
+pref("extensions.inspd.delintegratecommontags", "0");
+pref("extensions.inspd.defsearchselection", "allitems");
+pref("extensions.inspd.searchstyle", "json");
+pref("extensions.inspd.lastsearchq", "");
+pref("extensions.inspd.searchbar.autocomp", "1");
+pref("extensions.inspd.defcount", "15");
+pref("extensions.inspd.altpost", "0");
+pref("extensions.inspd.cloud.minfont", "16");
+pref("extensions.inspd.cloud.maxfont", "50");
+pref("extensions.inspd.cloud.mincolor", "8B2500");
+pref("extensions.inspd.cloud.maxcolor", "0000AC");
+pref("extensions.inspd.cloud.sortby", "alphabetic");
+pref("extensions.inspd.cloud.sorttype", "asc");
+pref("extensions.inspd.cloud.showcounts", "1");
+pref("extensions.inspd.cloud.mintag", "1");
+pref("extensions.inspd.cloud.showadd", "1");
+pref("extensions.inspd.bookmarks.showfavicon", "0");
+pref("extensions.inspd.stars.list", "");
+
