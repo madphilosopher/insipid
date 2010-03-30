@@ -9,7 +9,7 @@ var $buttons = {
 	},
 	
 	open_as_popup: function(url){
-	var mypopup = window.open(url,'popuppage','toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=700,height=400,left=30,top=30');
+	var mypopup = window.open(url,'popuppage','toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=800,height=400,left=30,top=30');
 	mypopup.focus();
 	},
 	

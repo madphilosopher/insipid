@@ -670,7 +670,7 @@ var $alt_Post = {
 							}
 							else if(alphacloud_txt){
 								$utils.appendjsHTML('Inspd_delintegrate_commontags_found = 1;var Inspd_delintegrate_commontags_found_url=1;',doc);
-								doc.evaluate("//div[@class='title']",doc,null,XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,null).snapshotItem(0).innerHTML += '<span style="display:none;">'+alphacloud_txt+'</span>';
+								doc.evaluate("//div[@class='title']",doc,null,XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,null).snapshotItem(0).innerHTML += '<span id="hidden_span_Inspd_delintegrate_commontags_found_1" style="display:none;">'+alphacloud_txt+'</span>';
 								$utils.appendjs(''+Inspd_BASE_ALTPOST_URL+'altpost_trigger.js',doc) ;
 								
 							}

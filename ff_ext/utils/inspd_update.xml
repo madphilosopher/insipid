@@ -7,7 +7,7 @@
             <r:Seq>
                 <r:li>
                     <r:Description>
-                        <version>0.0.2.8</version>
+                        <version>0.0.2.9</version>
 
                         <!-- Firefox -->
                         <targetApplication>
@@ -15,7 +15,7 @@
                                 <id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</id>
                                 <minVersion>1.5</minVersion>
                                 <maxVersion>6.0</maxVersion>
-                                <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.8.xpi</updateLink>
+                                <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.9.xpi</updateLink>
 
                             </r:Description>
                         </targetApplication>
@@ -26,15 +26,15 @@
                                 <minVersion>0.5</minVersion>
                                 <maxVersion>6.0</maxVersion>
 
-                                <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.8.xpi</updateLink>
+                                <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.9.xpi</updateLink>
                             </r:Description>
                         </targetApplication>
                     </r:Description>
                 </r:li>
             </r:Seq>
         </updates>
-        <version>0.0.2.8</version>
+        <version>0.0.2.9</version>
 
-        <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.8.xpi</updateLink>
+        <updateLink>https://neuro-tech.net/insipid/insipid_firefox_flock_extension_0.0.2.9.xpi</updateLink>
     </r:Description>
 </r:RDF>
