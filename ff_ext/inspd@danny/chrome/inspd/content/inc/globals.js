@@ -525,8 +525,13 @@ var $delpage = {
 		    var metaNode = null;
 	        var tagsNode = null ;
 	        var original_save_link_href = row.getElementsByTagName('a')[1].getAttribute('href'); 
-	        original_save_link_href = original_save_link_href.replace(/^\/save;_y(.*)\?/,$prefs.get('defurl')+'?op=add_bookmark&');
-	        original_save_link_href = original_save_link_href.replace(/jump=(.*)original_user=/,'copy_user=');
+	        if(original_save_link_href.match(/^\/save;_y(.*)\?/)){
+				original_save_link_href = original_save_link_href.replace(/^\/save;_y(.*)\?/,$prefs.get('defurl')+'?op=add_bookmark&');
+	        }
+			else{
+				original_save_link_href = original_save_link_href.replace(/^\/save\?/,$prefs.get('defurl')+'?op=add_bookmark&');
+	        }
+			original_save_link_href = original_save_link_href.replace(/jump=(.*)original_user=/,'copy_user=');
 	        original_save_link_href = original_save_link_href.replace(/%20/g,'+');
 	        var new_save_link_href = original_save_link_href ; 
 	        row.innerHTML += ' <a class="inlinesave" target="_blank" title="save this bookmark to Insipid" href="'+new_save_link_href+'">SAVE TO INSIPID</a>';
