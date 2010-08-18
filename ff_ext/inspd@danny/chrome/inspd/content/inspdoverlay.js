@@ -316,7 +316,7 @@ var $inspd = {
 	onPageLoad: function(aEvent) {
 		if (aEvent.originalTarget.nodeName == '#document'){
 			var doc = aEvent.originalTarget;
-				if(doc.location.href.match('^http://delicious.com/') && $prefs.get('delintegrate') == '1' ){
+				if(doc.location.href.match(/^http:\/\/delicious.com\/|^http:\/\/www.delicious.com\//) && $prefs.get('delintegrate') == '1' ){
 					$delpage.draw_postToInsipid(doc);
 				}
 				else if (doc.location.href.match('^'+$prefs.get('defurl')+'\\?op=add_bookmark') && $prefs.get('altpost') !== '0' && doc.forms[1]){
