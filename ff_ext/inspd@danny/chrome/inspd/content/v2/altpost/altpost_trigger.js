@@ -158,6 +158,7 @@ var $altp = {
 		for(var i = 0;i<j;i++){
 				var tag_name = $utils.trim(tagsfromtbl_all_anchors[i].title.replace(/\((.*)\)/,'')).toLowerCase() ;  
 				tag_name = tag_name.replace(/"/g,'\\"');
+				tag_name = tag_name.replace(/\\/g,'');
 				//alert(tag_name);
 				txtTagsObj +='"'+tag_name+'"';
 				if (i < j-1 ){txtTagsObj += ',';}
