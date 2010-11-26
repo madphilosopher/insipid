@@ -1,0 +1,27 @@
+- November 26, 2010 :
+* Added FF_EXT_ChangeLog file to keep track of changes in FireFox extension
+===========================
+- August 30, 2010 :
+* Fixed a bug in tags suggestion where backslashes were not properly escaped.
+===========================
+- August 19, 2010 :
+* Fixed "save to Insipid" links on del.icio.us pages. [2]
+===========================
+- August 06, 2010 :
+* Fixed "save to Insipid" links on del.icio.us pages.
+===========================
+- April 11, 2010 :
+* Fixed a bug in tags suggestion where double quotes were not properly escaped.
+===========================
+- April 05, 2010 :
+* Cleaned up some old and redundant js lines.
+* Fixed a bug in tags suggestion where long tags were mistakenly truncated.
+===========================
+- March 30, 2010 :
+* Fixed a bug when getting popular tags.
+* Wider popup post page. (800px)
+* Created an "archives" directory for saving xpi files.
+* Upped the version to 0.0.2.9 (updated install.rdf and inspd_update.xml)
+===========================
+- August 19, 2009 : 
+* Initial import.
