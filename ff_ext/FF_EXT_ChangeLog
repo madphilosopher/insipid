@@ -1,3 +1,6 @@
+- October 11, 2011 :
+* Upped browsers maxVersion to 15.0 in both /ff_ext/inspd@danny/install.rdf and /ff_ext/utils/inspd_update.xml
+===========================
 - November 26, 2010 :
 * Added FF_EXT_ChangeLog file to keep track of changes in FireFox extension
 ===========================
