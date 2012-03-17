@@ -1,0 +1,18 @@
+Action php54-cgi /php54.cgi
+AddHandler php54-cgi .php
+
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^bookmarks/(.*) insipid.cgi?tag=$1 [QSA]
+RewriteRule ^bookmarks insipid.cgi [QSA]
+RewriteRule ^feeds/bookmarks/(.*) insipid.cgi?op=rss&tag=$1 [QSA]
+RewriteRule ^feeds/bookmarks insipid.cgi?op=rss [QSA]
+RewriteRule ^snapshot/(.*) insipid.cgi?op=viewsnapshot&md5=$1 [QSA]
+
+RewriteRule ^feeds/json/tags/(.*) insipid.cgi?op=json_tags&tag=$1 [QSA]
+RewriteRule ^feeds/json/tags insipid.cgi?op=json_tags [QSA]
+
+RewriteRule ^feeds/json/posts/(.*) insipid.cgi?op=json_posts&tag=$1 [QSA]
+RewriteRule ^feeds/json/posts insipid.cgi?op=json_posts [QSA]
+
