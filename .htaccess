@@ -1,6 +1,4 @@
-Action php54-cgi /php54.cgi
-AddHandler php54-cgi .php
-
+DirectoryIndex index.cgi insipid.cgi
 
 RewriteEngine On
 RewriteBase /
