@@ -245,7 +245,7 @@ DOC
 	    } else {
 	      print <<IFORM;
 	<p>This allows you to import either 
-	<a href="http://www.neuro-tech.net/insipid/">Insipid</a> or 
+	<a href="https://github.com/LReeves/insipid">Insipid</a> or 
 	<a href="http://del.icio.us/">del.icio.us</a> backups.  For del.icio.us, you
 	must first use their API to export your bookmarks to an XML file.  To do this,
 	access the URL "http://username:password\@del.icio.us/api/posts/all?" 
@@ -790,7 +790,7 @@ sub show_toolbar {
 	}
 
 	print " | <a class=\"tools\" href=\"javascript:void window.open('$site_url/help.html','width=300,height=500');\">help</a> ";
-	print " | <a class=\"tools\" href=\"http://www.neuro-tech.net/insipid/\">source</a>";
+	print " | <a class=\"tools\" href=\"https://github.com/LReeves/insipid\">source</a>";
 
 	print "</div></tr></table></center>";
 }
@@ -1073,15 +1073,17 @@ sub show_bookmark {
 	
 	my $timestr = "";
 	if(logged_in() eq 1) {
-		$timestr = time2str("%Y-%m-%d %T EST", $timestamp, "EST");
+		#$timestr = time2str("%Y-%m-%d %T UTC", $timestamp, "UTC");
+		$timestr = time2str("%Y %b %e", $timestamp, "UTC");
 	} else {
-		$timestr = time2str("%Y-%m-%d", $timestamp, "EST");
+		$timestr = time2str("%Y %b %e", $timestamp, "UTC");
 	}
 
-	print "posted on $timestr ";
+	#print "posted on $timestr ";
+	print "$timestr";
 	    
 	if(defined($tags)) {
-	  print "to ";
+	  print ": ";
 	  my $cur;
 	    
 	  foreach $cur (split(/\ /, $tags)) {
