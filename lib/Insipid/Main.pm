@@ -203,6 +203,7 @@ sub main {
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	    <link rel="alternate" type="application/rss+xml" title="RSS" href="$feed_url$tspec" />
 	    <link rel="stylesheet" href="$site_url/insipid.css" type="text/css" title="Standard" />
+        <link rel="shortcut icon" href="/favicon.ico" />
 	  </head>
 	  <body marginheight="0" marginwidth="0">
 DOC
