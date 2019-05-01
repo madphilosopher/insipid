@@ -336,7 +336,7 @@ IFORM
 		if(param('description')) { $description = param('description'); }
 		$access_level = 1;
 		$button = "Add";
-		$snapshot_params = "<span class=\"formtext\">Snapshot:</span><input type=\"checkbox\" name=\"snapshot\" />\n";
+		$snapshot_params = "<input type=\"checkbox\" name=\"snapshot\" /><span class=\"formtext\">Snapshot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>\n";
 	      }
 	  
 	      my $style = "style=\"width:500px\"";
@@ -365,10 +365,10 @@ IFORM
 	      <span class="formtext">Tags:</span><br />
 	      <input name="tags" $style value="$tags" /><br />
 	      $snapshot_params
-	      <span class="formtext">Public:</span>
 	      <input type="checkbox" name="access_level" $access_box />
-	      <span class="formtext">Return:</span>
+	      <span class="formtext">Public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	      <input type="checkbox" name="redirect" $redir_box />
+	      <span class="formtext">Return&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	      <input type="hidden" name="save" value="true" />
 	      <input type="hidden" name="op" value="add_bookmark" />
 	      $extra_params

@@ -18,7 +18,7 @@
  */
 
 * {
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 }
 
 #leftside {
@@ -53,14 +53,14 @@
 }
 
 .tagtabletext{
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	text-decoration: none;
 	color:#000000;
 	
 }
 
 .bodytext{
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	color: black; 
 }
 
@@ -71,7 +71,7 @@
 }
 
 .inline_title{
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	color:#FFFFFF;
 	background:#000000;
 }
@@ -100,7 +100,7 @@ h3 {
 }
 
 a.tools { 
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	color: black; 
 	font-weight: bold;
 	line-height:2;
@@ -111,7 +111,7 @@ a.tools:visited {
 }
 
 a.tools:hover { 
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	color: black; 
 	font-weight: bold;
 	background:white;
@@ -121,36 +121,36 @@ a.tools:hover {
 
 
 .formtext { 
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	text-decoration: none; 
 }
 
 
 A { 
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	text-decoration: none; 
 }
 
 A:hover { 
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	text-decoration: underline 
 }
 
 A:visited { 
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	text-decoration: none;
 	color:blue;
 }
 
 .error {
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	margin-top: 40px;
 	margin-bottom: 10px;
 	color: red;
 }
 
 .bookmarkOperations {
-	font-family:Helvetica, Arial, sans-serif;
+	font-family:"Ubuntu", Helvetica, sans-serif;
 	font-size: small;
 	margin-left: 20px;
 	color: #777777;
