@@ -44,7 +44,7 @@ use CGI qw/:standard/;
 use CGI::Carp qw(fatalsToBrowser);
 use URI::Escape;
 use IO::File;
-use XML::Parser;
+#use XML::Parser;
 use XML::Writer;
 use Date::Format;
 use Date::Parse;
@@ -894,10 +894,10 @@ sub show_bookmarks {
 	$sql = "$sql order by $tbl_bookmarks.date desc";
 
 	# paging functionality
-	$sql = "$sql limit 50";
+	$sql = "$sql limit 100";
 	
 	if(defined(url_param('page'))) {
-	    my $offset = ((url_param('page') - 1) * 50);
+	    my $offset = ((url_param('page') - 1) * 100);
 	    $sql = "$sql offset $offset";
 	}
 
@@ -906,7 +906,7 @@ sub show_bookmarks {
 
 	$subquery = "";
 	if($sth->rows > 0) {
-		if($sth->rows ne 50) { $last_page = 1; }
+		if($sth->rows ne 100) { $last_page = 1; }
 	
 		$subquery = " $tbl_bookmarks.id in (";
 		

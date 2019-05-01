@@ -33,6 +33,7 @@ if(!-e "insipid-config.cgi") {
 
 eval {
 	push(@INC, "lib");
+	#push(@INC, "cspanm");
 	require Insipid::Main;
 	Insipid::Main::main();
 };
