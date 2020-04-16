@@ -40,3 +40,6 @@ automatically configured.
 
 If you ever upgrade Insipid, the database schema will be automatically
 updated upon access.
+
+## In-Production Example
+ * [madphilosopher's insipid bookmarks](https://b.cyxd.ca/)
