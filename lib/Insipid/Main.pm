@@ -790,7 +790,7 @@ sub show_toolbar {
 		print " | <a class=\"tools\" href=\"$site_url/insipid.cgi?op=login\">login</a>";
 	}
 
-	print " | <a class=\"tools\" href=\"javascript:void window.open('$site_url/help.html','width=300,height=500');\">help</a> ";
+	print " | <a class=\"tools\" href=\"$site_url/help.html\">help</a> ";
 	print " | <a class=\"tools\" href=\"https://github.com/LReeves/insipid\">source</a>";
 
 	print "</div></tr></table></center>";
