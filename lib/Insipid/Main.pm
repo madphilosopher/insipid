@@ -246,7 +246,7 @@ DOC
 	    } else {
 	      print <<IFORM;
 	<p>This allows you to import either 
-	<a href="https://github.com/LReeves/insipid">Insipid</a> or 
+	<a href="https://github.com/madphilosopher/insipid">Insipid</a> or
 	<a href="http://del.icio.us/">del.icio.us</a> backups.  For del.icio.us, you
 	must first use their API to export your bookmarks to an XML file.  To do this,
 	access the URL "http://username:password\@del.icio.us/api/posts/all?" 
@@ -791,7 +791,7 @@ sub show_toolbar {
 	}
 
 	print " | <a class=\"tools\" href=\"$site_url/help.html\">help</a> ";
-	print " | <a class=\"tools\" href=\"https://github.com/LReeves/insipid\">source</a>";
+	print " | <a class=\"tools\" href=\"https://github.com/madphilosopher/insipid\">source</a>";
 
 	print "</div></tr></table></center>";
 }
