@@ -58,7 +58,7 @@ if(defined($sid)) {
 	if($sth->rows ne 0) {
 		$logged_in = 1;
 	} else {
-		print "Set-Cookie: $ctag=; path=$pagepath; expires=Fri, 03-Sep-2020 20:20:13 GMT\n";
+		print "Set-Cookie: $ctag=; path=$pagepath; SameSite=Strict; Max-Age=7776000\n";   # 90-day expiry
 	}
 }
 
@@ -84,7 +84,7 @@ sub login {
 
 	$logged_in = 1;
 	
-	return "Set-Cookie: $ctag=$sid; path=$pagepath; expires=Fri, 03-Sep-2020 20:20:13 GMT\n";
+	return "Set-Cookie: $ctag=$sid; path=$pagepath; SameSite=Strict; Max-Age=7776000\n";   # 90-day expiry
 }
 
 # Logs out and returns the cookie header
@@ -97,8 +97,7 @@ sub logout {
 
 		$logged_in = 0;
 		
-		return "Set-Cookie: $ctag=; path=$pagepath; expires=Fri, " . 
-			"03-Sep-2020 20:20:13 GMT\n";
+		return "Set-Cookie: $ctag=; path=$pagepath; SameSite=Strict; Max-Age=7776000\n";   # 90-day expiry
 	}
 }
 
